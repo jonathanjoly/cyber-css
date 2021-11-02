@@ -1,0 +1,36 @@
+@font-face {
+    font-family: Cyber;
+    src: url("https://assets.codepen.io/605876/Blender-Pro-Bold.otf");
+    font-display: swap;
+  }
+
+$font : 'Cyber', sans-serif;
+
+$primary: #FCEE0A;
+$primary-dark: #dccf03;
+$info: #00F1FF;
+$info-dark: #00ccd8;
+$success: #1CD577;
+$success-dark: #16aa5f;
+$warning: #FF4400;
+$warning-dark: #d83a00;
+$danger: #FF003C;
+$danger-dark: #d80033;
+$dark: #292828;
+$white: #FFF;
+$dark-trans: rgba(41, 40, 40, 0.7);
+
+$xxl-size: 4em;
+$xl-size: 2em;
+$l-size: 1.3em;
+$m-size: 1em;
+$s-size: 0.75em;
+$xs-size: 0.50em;
+
+
+$primary-shadow: inset -5px 0 0 $info;
+$secondary-shadow: inset -5px 0 0 $primary;
+$ternary-shadow: inset -5px 0 0 $danger;
+
+$clip-path: polygon(0 0, 110% 0, 110% 110%, 5% 110%, 0 75%);
+$clip-path-xl: polygon(0 0, 100% 0, 100% 100%, 20 100%, 0 );

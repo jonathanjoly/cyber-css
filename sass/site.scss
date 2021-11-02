@@ -1,0 +1,35 @@
+@import 'reset.scss';
+@import 'cyber-css.scss';
+
+
+
+.p-wrapper {
+    background: #292828;
+}
+.p-right {
+    width: 1440px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+
+.p-accordion-back {
+    padding: 50px;
+    background-image: url("../assets/01.jpg");
+}
+
+.p-card-back {
+    padding: 50px;
+    background-image: url("../assets/02.jpg");
+}
+
+.card {
+    .cypu-card {
+        width: 300px;
+    }
+}
+
+.p-modal-back {
+    padding: 50px;
+    background-image: url("../assets/04.jpg");
+}

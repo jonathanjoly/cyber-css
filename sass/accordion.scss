@@ -1,0 +1,62 @@
+@import 'variable.scss';
+
+
+.cypu-accordion {
+
+    font-family: $font;
+    color: $dark;
+
+    .cypu-accordion-item {
+        margin-bottom: 1px;
+    }
+
+    .cypu-accordion-header {
+        display: flex;
+        font-weight: bold;
+        font-size: $m-size;
+    }
+
+    .cypu-accordion-title {
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        background: $primary;
+        outline: transparent;   
+        border: 0;
+        clip-path: $clip-path;
+        width: 250px;
+        padding: $s-size $m-size; 
+    }
+    
+    .cypu-accordion-actions {
+        background: $primary;
+        width: 100%;
+        display: flex;
+        box-shadow: $primary-shadow;
+    }
+    .cypu-accordion-action {
+        padding: $s-size $m-size; 
+        margin-left: auto;
+        cursor: pointer;
+    }
+
+
+    .cypu-accordion-content {
+        padding: $m-size;
+        background: $dark-trans;
+        margin-left: 20px;
+        margin-right: 5px;
+        color: $white;
+    }
+
+    .cypu-accordion-item.active {
+        .cypu-accordion-title,
+        .cypu-accordion-actions {
+            background: $info;
+        }
+        .cypu-accordion-actions {
+            box-shadow: $ternary-shadow;
+        }
+    
+    }
+}
+

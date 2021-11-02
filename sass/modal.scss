@@ -1,0 +1,67 @@
+.cypu-modal {
+    font-family: $font;
+
+    .cypu-modal-header::before {
+        content: " ";
+        display: block;
+        width: 20px;
+        height: 23px;
+        background: $primary;
+        padding: $m-size 0; 
+        clip-path: polygon(0 0, 110% 0, 110% 110%, 40% 110%, 0 60%);
+    }
+
+    .cypu-modal-header,
+    .cypu-modal-footer {
+        display: flex;
+        align-items: center;
+    }
+
+    .cypu-modal-title {
+        background: $primary;
+        padding: $s-size $m-size $s-size 0; 
+        font-weight: bold;
+        font-size: $l-size;
+        width: 100%;
+        height: 24px;
+        box-shadow: $primary-shadow;
+    }
+
+    .cypu-modal-content {
+        padding: $l-size;
+        background: $dark-trans;
+        margin-left: 7px;
+        margin-right: 5px;
+        color: $white;
+        font-size: $m-size;
+    }
+    
+    .cypu-modal-footer::before {
+        content: " ";
+        display: block;
+        width: 20px;
+        height: 43px;
+        background: $primary;
+        clip-path: polygon(0 0, 110% 0, 110% 110%, 40% 110%, 0 60%);
+    }
+
+    .cypu-modal-footer-content {
+        display: flex;
+        background: $primary;
+        width: 100%;
+
+        .cypu-button-group {
+            border-left: 5   px solid $info;
+            margin-left: auto;
+        }
+
+        .cypu-modal-footer-filler {
+            background: $primary;
+            width: auto;
+        }
+        .cypu-btn {
+            clip-path: none;
+        }
+    }
+
+}

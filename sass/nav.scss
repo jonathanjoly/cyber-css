@@ -1,0 +1,48 @@
+.cypu-nav {
+    font-size: $m-size;
+    font-family: $font;
+
+    .cypu-nav-bar::before {
+        content: " ";
+        display: block;
+        width: 20px;
+        height: 24px;
+        background: $primary;
+        padding: $s-size 0; 
+        clip-path: polygon(0 0, 110% 0, 110% 110%, 40% 110%, 0 60%);
+    }
+
+    .cypu-nav-bar{
+        display: flex;
+        align-items: center;
+
+    }
+    .cypu-nav-bar-content {
+        background: $primary;
+        padding: $s-size 0; 
+        height: 24px;
+        display: flex;
+        width: 100%;
+    }
+
+    .cypu-nav-brand {
+        color: $dark;
+        padding-right: $xl-size;
+    }
+
+    .cypu-nav-item {
+        margin-right: $s-size;
+        cursor: pointer;
+    }
+    .cypu-nav-item.active {
+        color: $danger-dark;
+    }
+
+    .cypu-nav-item:hover {
+        border-bottom:5px solid $info;
+    }
+
+    .cypu-nav-item.active:hover {
+       border:none;
+    }
+}

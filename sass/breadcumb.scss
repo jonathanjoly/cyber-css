@@ -1,0 +1,26 @@
+@import 'variable.scss';
+
+.cypu-breadcumb {
+    display: flex;
+    font-family: $font;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    .cypu-breadcumb-item {
+        padding: $m-size $xs-size;
+        color: $primary;
+    }
+
+    .cypu-breadcumb-item.link {
+        color: $danger;
+        cursor: pointer;
+    }
+
+    .cypu-breadcumb-item.link::after {
+        content: '/';
+        padding: $m-size 0 $m-size $xs-size;
+        color: $primary;
+    }
+
+    
+}

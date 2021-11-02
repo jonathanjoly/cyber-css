@@ -1,0 +1,61 @@
+@import 'variable.scss';
+
+.cypu-btn {
+    font-family: $font;
+    color: $dark;
+    text-transform: uppercase;
+    background: $primary;
+    font-weight: bold;
+    box-shadow: $primary-shadow;
+    font-size: $m-size;
+    outline: transparent;
+    letter-spacing: 2px;
+    border: 0;
+    padding: $s-size $m-size;  
+    clip-path: $clip-path;
+    cursor: pointer;
+}
+
+.cypu-btn:hover {
+    background: $primary-dark;
+}
+
+
+.cypu-btn.info {
+    background: $info;
+    box-shadow: $secondary-shadow;
+}
+.cypu-btn.info:hover {
+    background: $info-dark;
+}
+
+.cypu-btn.success {
+    background: $success;
+    box-shadow: $secondary-shadow;
+}
+.cypu-btn.success:hover {
+    background: $success-dark;
+}
+
+.cypu-btn.warning {
+    background: $warning;
+    color: $white;
+}
+.cypu-btn.warning:hover {
+    background: $warning-dark;
+}
+
+.cypu-btn.danger {
+    background: $danger;
+    color: $white;
+}
+.cypu-btn.danger:hover {
+    background: $danger-dark;
+}
+
+.cypu-button-group {
+    :not(:first-child) {
+        clip-path: none;
+        margin-left: -4px;
+    }
+}

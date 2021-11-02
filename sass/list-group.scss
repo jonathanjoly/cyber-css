@@ -1,0 +1,68 @@
+@import 'variable.scss';
+
+
+
+
+
+
+.cypu-list-group {
+
+    font-family: $font;
+    color: $dark;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: $m-size;
+
+    .cypu-list-group-item-content::before {
+        content: " ";
+        display: block;
+        width: 20px;
+        height: 16px;
+        background: $primary;
+        padding: $m-size 0; 
+        clip-path: polygon(0 0, 110% 0, 110% 110%, 40% 110%, 0 60%);
+    }
+
+    .cypu-list-group-item-content{
+        display: flex;
+        margin-bottom: 1px;
+        cursor: pointer;
+    }
+
+    .cypu-list-group-item-header {
+        background: $primary;
+        padding: $m-size $m-size; 
+        width: 100%;
+        box-shadow: $primary-shadow;
+        letter-spacing: 2px;
+        height: 16px;
+        
+    }
+
+
+    .cypu-list-group-item:hover {
+        .cypu-list-group-item-content::before,
+        .cypu-list-group-item-header{
+            background: $primary-dark;
+        } 
+    }
+
+    .cypu-list-group-item.active {
+        .cypu-list-group-item-content::before {
+            background: $info;
+        }
+        .cypu-list-group-item-header {
+            background: $info;
+            box-shadow: $ternary-shadow;
+        }
+        
+        
+    }
+    .cypu-list-group-item.active:hover {
+        .cypu-list-group-item-content::before,
+        .cypu-list-group-item-header{
+            background: $info-dark;
+        } 
+    }
+
+}

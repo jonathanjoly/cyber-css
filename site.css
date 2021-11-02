@@ -1,0 +1,611 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: Cyber;
+  src: url("https://assets.codepen.io/605876/Blender-Pro-Bold.otf");
+  font-display: swap;
+}
+@font-face {
+  font-family: Cyber;
+  src: url("https://assets.codepen.io/605876/Blender-Pro-Bold.otf");
+  font-display: swap;
+}
+.cypu-accordion {
+  font-family: "Cyber", sans-serif;
+  color: #292828;
+}
+.cypu-accordion .cypu-accordion-item {
+  margin-bottom: 1px;
+}
+.cypu-accordion .cypu-accordion-header {
+  display: flex;
+  font-weight: bold;
+  font-size: 1em;
+}
+.cypu-accordion .cypu-accordion-title {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: #FCEE0A;
+  outline: transparent;
+  border: 0;
+  clip-path: polygon(0 0, 110% 0, 110% 110%, 5% 110%, 0 75%);
+  width: 250px;
+  padding: 0.75em 1em;
+}
+.cypu-accordion .cypu-accordion-actions {
+  background: #FCEE0A;
+  width: 100%;
+  display: flex;
+  box-shadow: inset -5px 0 0 #00F1FF;
+}
+.cypu-accordion .cypu-accordion-action {
+  padding: 0.75em 1em;
+  margin-left: auto;
+  cursor: pointer;
+}
+.cypu-accordion .cypu-accordion-content {
+  padding: 1em;
+  background: rgba(41, 40, 40, 0.7);
+  margin-left: 20px;
+  margin-right: 5px;
+  color: #FFF;
+}
+.cypu-accordion .cypu-accordion-item.active .cypu-accordion-title,
+.cypu-accordion .cypu-accordion-item.active .cypu-accordion-actions {
+  background: #00F1FF;
+}
+.cypu-accordion .cypu-accordion-item.active .cypu-accordion-actions {
+  box-shadow: inset -5px 0 0 #FF003C;
+}
+
+@font-face {
+  font-family: Cyber;
+  src: url("https://assets.codepen.io/605876/Blender-Pro-Bold.otf");
+  font-display: swap;
+}
+.cypu-alert::before {
+  content: " ";
+  display: block;
+  width: 20px;
+  height: 24px;
+  background: #FCEE0A;
+  padding: 0.75em 0;
+  clip-path: polygon(0 0, 110% 0, 110% 110%, 40% 110%, 0 60%);
+}
+
+.cypu-alert {
+  display: flex;
+  align-items: center;
+  font-size: 1em;
+  font-family: "Cyber", sans-serif;
+}
+
+.cypu-alert-message {
+  background: #FCEE0A;
+  padding: 0.75em 1em 0.75em 0;
+  width: 100%;
+  height: 24px;
+}
+
+.cypu-alert-actions {
+  background: #FCEE0A;
+  max-height: 24px;
+  padding: 0.75em 1em 0.75em 0;
+  box-shadow: inset -5px 0 0 #00F1FF;
+}
+
+.cypu-alert.info::before,
+.cypu-alert.info .cypu-alert-message,
+.cypu-alert.info .cypu-alert-actions {
+  background: #00F1FF;
+}
+
+.cypu-alert.success::before,
+.cypu-alert.success .cypu-alert-message,
+.cypu-alert.success .cypu-alert-actions {
+  background: #1CD577;
+}
+
+.cypu-alert.warning::before,
+.cypu-alert.warning .cypu-alert-message,
+.cypu-alert.warning .cypu-alert-actions {
+  background: #FF4400;
+  color: #FFF;
+}
+
+.cypu-alert.danger::before,
+.cypu-alert.danger .cypu-alert-message,
+.cypu-alert.danger .cypu-alert-actions {
+  background: #FF003C;
+  color: #FFF;
+}
+
+.cypu-alert.info .cypu-alert-actions,
+.cypu-alert.success .cypu-alert-actions {
+  box-shadow: inset -5px 0 0 #FCEE0A;
+}
+
+.cypu-badge {
+  font-family: "Cyber", sans-serif;
+  color: #292828;
+  display: inline-block;
+}
+.cypu-badge .cypu-badge-content::before {
+  content: " ";
+  display: block;
+  width: 10px;
+  height: 5px;
+  background: #FCEE0A;
+  padding: 0.5em 0;
+  clip-path: polygon(0 0, 110% 0, 110% 110%, 40% 110%, 0 60%);
+}
+.cypu-badge .cypu-badge-content {
+  display: flex;
+  justify-content: center;
+}
+.cypu-badge .cypu-badge-text {
+  background: #FCEE0A;
+  box-shadow: inset -5px 0 0 #00F1FF;
+  font-size: 0.5em;
+  padding: 0.5em 1em 0.5em 0;
+}
+.cypu-badge .cypu-badge-number {
+  background: #00F1FF;
+  position: relative;
+  top: 20px;
+  left: -33px;
+  font-size: 12px;
+  height: 15px;
+  border-bottom: 2px solid #FCEE0A;
+  padding: 0 3px;
+}
+
+.cypu-badge.info .cypu-badge-content::before {
+  background: #00F1FF;
+}
+.cypu-badge.info .cypu-badge-text {
+  background: #00F1FF;
+  box-shadow: inset -5px 0 0 #FCEE0A;
+}
+.cypu-badge.info .cypu-badge-number {
+  background-color: #FCEE0A;
+  border-color: #00F1FF;
+}
+
+.cypu-badge.success .cypu-badge-content::before {
+  background: #1CD577;
+}
+.cypu-badge.success .cypu-badge-text {
+  background: #1CD577;
+  box-shadow: inset -5px 0 0 #FCEE0A;
+}
+.cypu-badge.success .cypu-badge-number {
+  background-color: #FCEE0A;
+  border-color: #1CD577;
+}
+
+.cypu-badge.warning .cypu-badge-content::before {
+  background: #FF4400;
+}
+.cypu-badge.warning .cypu-badge-text {
+  background: #FF4400;
+  color: #FFF;
+}
+.cypu-badge.warning .cypu-badge-number {
+  background-color: #00F1FF;
+  border-color: #FF4400;
+}
+
+.cypu-badge.danger .cypu-badge-content::before {
+  background: #FF003C;
+}
+.cypu-badge.danger .cypu-badge-text {
+  background: #FF003C;
+  color: #FFF;
+}
+.cypu-badge.danger .cypu-badge-number {
+  background-color: #00F1FF;
+  border-color: #FF003C;
+}
+
+@font-face {
+  font-family: Cyber;
+  src: url("https://assets.codepen.io/605876/Blender-Pro-Bold.otf");
+  font-display: swap;
+}
+.cypu-breadcumb {
+  display: flex;
+  font-family: "Cyber", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.cypu-breadcumb .cypu-breadcumb-item {
+  padding: 1em 0.5em;
+  color: #FCEE0A;
+}
+.cypu-breadcumb .cypu-breadcumb-item.link {
+  color: #FF003C;
+  cursor: pointer;
+}
+.cypu-breadcumb .cypu-breadcumb-item.link::after {
+  content: "/";
+  padding: 1em 0 1em 0.5em;
+  color: #FCEE0A;
+}
+
+@font-face {
+  font-family: Cyber;
+  src: url("https://assets.codepen.io/605876/Blender-Pro-Bold.otf");
+  font-display: swap;
+}
+.cypu-btn {
+  font-family: "Cyber", sans-serif;
+  color: #292828;
+  text-transform: uppercase;
+  background: #FCEE0A;
+  font-weight: bold;
+  box-shadow: inset -5px 0 0 #00F1FF;
+  font-size: 1em;
+  outline: transparent;
+  letter-spacing: 2px;
+  border: 0;
+  padding: 0.75em 1em;
+  clip-path: polygon(0 0, 110% 0, 110% 110%, 5% 110%, 0 75%);
+  cursor: pointer;
+}
+
+.cypu-btn:hover {
+  background: #dccf03;
+}
+
+.cypu-btn.info {
+  background: #00F1FF;
+  box-shadow: inset -5px 0 0 #FCEE0A;
+}
+
+.cypu-btn.info:hover {
+  background: #00ccd8;
+}
+
+.cypu-btn.success {
+  background: #1CD577;
+  box-shadow: inset -5px 0 0 #FCEE0A;
+}
+
+.cypu-btn.success:hover {
+  background: #16aa5f;
+}
+
+.cypu-btn.warning {
+  background: #FF4400;
+  color: #FFF;
+}
+
+.cypu-btn.warning:hover {
+  background: #d83a00;
+}
+
+.cypu-btn.danger {
+  background: #FF003C;
+  color: #FFF;
+}
+
+.cypu-btn.danger:hover {
+  background: #d80033;
+}
+
+.cypu-button-group :not(:first-child) {
+  clip-path: none;
+  margin-left: -4px;
+}
+
+@font-face {
+  font-family: Cyber;
+  src: url("https://assets.codepen.io/605876/Blender-Pro-Bold.otf");
+  font-display: swap;
+}
+.cypu-card {
+  font-family: "Cyber", sans-serif;
+}
+.cypu-card .cypu-card-header::before {
+  content: " ";
+  display: block;
+  width: 20px;
+  height: 23px;
+  background: #FCEE0A;
+  padding: 1em 0;
+  clip-path: polygon(0 0, 110% 0, 110% 110%, 40% 110%, 0 60%);
+}
+.cypu-card .cypu-card-header {
+  display: flex;
+  align-items: center;
+}
+.cypu-card .cypu-card-title {
+  background: #FCEE0A;
+  padding: 0.75em 1em 0.75em 0;
+  font-weight: bold;
+  font-size: 1.3em;
+  width: 100%;
+  height: 24px;
+  box-shadow: inset -5px 0 0 #00F1FF;
+}
+.cypu-card .cypy-card-image {
+  margin: 0 5px 0 7px;
+}
+.cypu-card .cypy-card-image img {
+  width: 100%;
+}
+.cypu-card .cypy-card-content {
+  padding: 1.3em;
+  background: rgba(41, 40, 40, 0.7);
+  margin-left: 7px;
+  margin-right: 5px;
+  color: #FFF;
+  font-size: 1em;
+}
+
+@font-face {
+  font-family: Cyber;
+  src: url("https://assets.codepen.io/605876/Blender-Pro-Bold.otf");
+  font-display: swap;
+}
+.cypu-list-group {
+  font-family: "Cyber", sans-serif;
+  color: #292828;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1em;
+}
+.cypu-list-group .cypu-list-group-item-content::before {
+  content: " ";
+  display: block;
+  width: 20px;
+  height: 16px;
+  background: #FCEE0A;
+  padding: 1em 0;
+  clip-path: polygon(0 0, 110% 0, 110% 110%, 40% 110%, 0 60%);
+}
+.cypu-list-group .cypu-list-group-item-content {
+  display: flex;
+  margin-bottom: 1px;
+  cursor: pointer;
+}
+.cypu-list-group .cypu-list-group-item-header {
+  background: #FCEE0A;
+  padding: 1em 1em;
+  width: 100%;
+  box-shadow: inset -5px 0 0 #00F1FF;
+  letter-spacing: 2px;
+  height: 16px;
+}
+.cypu-list-group .cypu-list-group-item:hover .cypu-list-group-item-content::before,
+.cypu-list-group .cypu-list-group-item:hover .cypu-list-group-item-header {
+  background: #dccf03;
+}
+.cypu-list-group .cypu-list-group-item.active .cypu-list-group-item-content::before {
+  background: #00F1FF;
+}
+.cypu-list-group .cypu-list-group-item.active .cypu-list-group-item-header {
+  background: #00F1FF;
+  box-shadow: inset -5px 0 0 #FF003C;
+}
+.cypu-list-group .cypu-list-group-item.active:hover .cypu-list-group-item-content::before,
+.cypu-list-group .cypu-list-group-item.active:hover .cypu-list-group-item-header {
+  background: #00ccd8;
+}
+
+.cypu-modal {
+  font-family: "Cyber", sans-serif;
+}
+.cypu-modal .cypu-modal-header::before {
+  content: " ";
+  display: block;
+  width: 20px;
+  height: 23px;
+  background: #FCEE0A;
+  padding: 1em 0;
+  clip-path: polygon(0 0, 110% 0, 110% 110%, 40% 110%, 0 60%);
+}
+.cypu-modal .cypu-modal-header,
+.cypu-modal .cypu-modal-footer {
+  display: flex;
+  align-items: center;
+}
+.cypu-modal .cypu-modal-title {
+  background: #FCEE0A;
+  padding: 0.75em 1em 0.75em 0;
+  font-weight: bold;
+  font-size: 1.3em;
+  width: 100%;
+  height: 24px;
+  box-shadow: inset -5px 0 0 #00F1FF;
+}
+.cypu-modal .cypu-modal-content {
+  padding: 1.3em;
+  background: rgba(41, 40, 40, 0.7);
+  margin-left: 7px;
+  margin-right: 5px;
+  color: #FFF;
+  font-size: 1em;
+}
+.cypu-modal .cypu-modal-footer::before {
+  content: " ";
+  display: block;
+  width: 20px;
+  height: 43px;
+  background: #FCEE0A;
+  clip-path: polygon(0 0, 110% 0, 110% 110%, 40% 110%, 0 60%);
+}
+.cypu-modal .cypu-modal-footer-content {
+  display: flex;
+  background: #FCEE0A;
+  width: 100%;
+}
+.cypu-modal .cypu-modal-footer-content .cypu-button-group {
+  border-left: 5 px solid #00F1FF;
+  margin-left: auto;
+}
+.cypu-modal .cypu-modal-footer-content .cypu-modal-footer-filler {
+  background: #FCEE0A;
+  width: auto;
+}
+.cypu-modal .cypu-modal-footer-content .cypu-btn {
+  clip-path: none;
+}
+
+@font-face {
+  font-family: Cyber;
+  src: url("https://assets.codepen.io/605876/Blender-Pro-Bold.otf");
+  font-display: swap;
+}
+.cypu-h1 {
+  font-family: "Cyber", sans-serif;
+  color: #FCEE0A;
+  font-size: 4em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 30px 0 10px 0;
+}
+
+.cypu-h2 {
+  font-family: "Cyber", sans-serif;
+  color: #FCEE0A;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 30px 0 10px 0;
+}
+
+.cypu-h3 {
+  font-family: "Cyber", sans-serif;
+  color: #FCEE0A;
+  font-size: 1.3em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 30px 0 10px 0;
+}
+
+.cypu-nav {
+  font-size: 1em;
+  font-family: "Cyber", sans-serif;
+}
+.cypu-nav .cypu-nav-bar::before {
+  content: " ";
+  display: block;
+  width: 20px;
+  height: 24px;
+  background: #FCEE0A;
+  padding: 0.75em 0;
+  clip-path: polygon(0 0, 110% 0, 110% 110%, 40% 110%, 0 60%);
+}
+.cypu-nav .cypu-nav-bar {
+  display: flex;
+  align-items: center;
+}
+.cypu-nav .cypu-nav-bar-content {
+  background: #FCEE0A;
+  padding: 0.75em 0;
+  height: 24px;
+  display: flex;
+  width: 100%;
+}
+.cypu-nav .cypu-nav-brand {
+  color: #292828;
+  padding-right: 2em;
+}
+.cypu-nav .cypu-nav-item {
+  margin-right: 0.75em;
+  cursor: pointer;
+}
+.cypu-nav .cypu-nav-item.active {
+  color: #d80033;
+}
+.cypu-nav .cypu-nav-item:hover {
+  border-bottom: 5px solid #00F1FF;
+}
+.cypu-nav .cypu-nav-item.active:hover {
+  border: none;
+}
+
+.p-wrapper {
+  background: #292828;
+}
+
+.p-right {
+  width: 1440px;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+.p-accordion-back {
+  padding: 50px;
+  background-image: url("../assets/01.jpg");
+}
+
+.p-card-back {
+  padding: 50px;
+  background-image: url("../assets/02.jpg");
+}
+
+.card .cypu-card {
+  width: 300px;
+}
+
+.p-modal-back {
+  padding: 50px;
+  background-image: url("../assets/04.jpg");
+}
+
+/*# sourceMappingURL=site.css.map */

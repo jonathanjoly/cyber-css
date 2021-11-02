@@ -1,0 +1,48 @@
+@import 'variable.scss';
+
+.cypu-card {
+    font-family: $font;
+
+    .cypu-card-header::before {
+        content: " ";
+        display: block;
+        width: 20px;
+        height: 23px;
+        background: $primary;
+        padding: $m-size 0; 
+        clip-path: polygon(0 0, 110% 0, 110% 110%, 40% 110%, 0 60%);
+    }
+
+    .cypu-card-header {
+        display: flex;
+        align-items: center;
+    }
+
+    .cypu-card-title {
+        background: $primary;
+        padding: $s-size $m-size $s-size 0; 
+        font-weight: bold;
+        font-size: $l-size;
+        width: 100%;
+        height: 24px;
+        box-shadow: $primary-shadow;
+    }
+
+    .cypy-card-image {
+        margin:0 5px 0 7px;
+
+        img {
+            width: 100%;
+        }
+        
+    }
+
+    .cypy-card-content {
+        padding: $l-size;
+        background: $dark-trans;
+        margin-left: 7px;
+        margin-right: 5px;
+        color: $white;
+        font-size: $m-size;
+    }
+} 

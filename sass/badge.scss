@@ -1,0 +1,106 @@
+.cypu-badge {
+    font-family: $font;
+    color: $dark;
+    display: inline-block;
+
+    .cypu-badge-content::before {
+        content: " ";
+        display: block;
+        width: 10px;
+        height: 5px;
+        background: $primary;
+        padding: $xs-size 0; 
+        clip-path: polygon(0 0, 110% 0, 110% 110%, 40% 110%, 0 60%);
+    }
+
+    .cypu-badge-content {
+        display: flex;
+        justify-content:center ;
+    }
+
+    .cypu-badge-text {
+        background: $primary;
+        box-shadow: $primary-shadow;
+        font-size: $xs-size;
+        padding: $xs-size $m-size $xs-size 0;  
+    }
+
+    .cypu-badge-number {
+        background: $info;
+        position: relative;
+        top: 20px;
+        left: -33px;
+        font-size: 12px;
+        height: 15px;
+        border-bottom: 2px solid $primary;
+        padding: 0 3px;
+    }
+}
+.cypu-badge.info {
+
+    .cypu-badge-content::before {
+        background: $info;
+    }
+
+    .cypu-badge-text {
+        background: $info;
+        box-shadow: $secondary-shadow;
+    }
+
+    .cypu-badge-number {
+        background-color: $primary;
+        border-color: $info;
+    }
+}
+
+.cypu-badge.success {
+
+    .cypu-badge-content::before {
+        background: $success;
+    }
+
+    .cypu-badge-text {
+        background: $success;
+        box-shadow: $secondary-shadow;
+    }
+    .cypu-badge-number {
+        background-color: $primary;
+        border-color: $success;
+    }
+}
+
+.cypu-badge.warning {
+
+    .cypu-badge-content::before {
+        background: $warning;
+    }
+
+    .cypu-badge-text {
+        background: $warning;
+        color: $white;
+    }
+
+    .cypu-badge-number {
+        background-color: $info;
+        border-color: $warning;
+    }
+    
+}
+
+.cypu-badge.danger {
+    .cypu-badge-content::before {
+        background: $danger;
+    }
+
+    .cypu-badge-text {
+        background: $danger;
+        color: $white;
+    }
+
+    .cypu-badge-number {
+        background-color: $info;
+        border-color: $danger;
+    }
+    
+}
+
